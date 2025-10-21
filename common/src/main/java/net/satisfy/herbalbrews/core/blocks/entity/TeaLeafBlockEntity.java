@@ -58,6 +58,9 @@ public class TeaLeafBlockEntity extends BlockEntity implements BlockEntityTicker
 
         if (timer >= dryingDuration) {
             BlockState state = level.getBlockState(blockPos);
+            if(!state.hasProperty(TeaLeafBlock.DRYING))
+                return;
+
             int dryingStage = state.getValue(TeaLeafBlock.DRYING);
             if (dryingStage < 4) {
                 level.levelEvent(2001, blockPos, Block.getId(state));
