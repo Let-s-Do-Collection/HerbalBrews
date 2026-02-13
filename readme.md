@@ -1,30 +1,119 @@
-<p align="center"><img src="https://imgur.com/9YdVzce.png" width="1200"></p>
+![HerbalBrews](https://lets-do.ch/assets/mod-logos/herbalbrews.png)
 
-<h1 align="center">Welcome to Herbal Brews!</h1>
-
-<p>Tea Time! In Herbal Brews, it's all about tea and brewing: lavender tea, black tea, green tea, as well as coffee and potions, along with vials of long-lasting strengthening effects.</p>
-
-
-
-
-<div style="text-align: center;">
-    Credits: Tea Leaf Texture by <a href="https://www.cometkins.com">Cometkins</a>
-</div>
-
-
-<h1 align="center">Available for</h1>
-<p align="center"><img src="https://imgur.com/gREqi3m.png" width="240" height="120"></p>
-
-<h1 align="center">Be Part of Our Journey</h1>
+<br>
 
 <p align="center">
-    <a title="discord" href="https://discord.gg/Vqu6wYZwdZ">
-        <img style="display: block; margin-left: auto; margin-right: auto;" src="https://1000logos.net/wp-content/uploads/2021/06/Discord-logo-2015.png" alt="" width="" height="140" />
-    </a>
-    <a title="patreon" href="https://www.patreon.com/user?u=78595058">
-    <picture>
-      <source style="display: block; margin-left: auto; margin-right: auto;" width="" height="140" media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/4R738W0/patreon-logo-icon-170869-dark.png">
-      <img style="display: block; margin-left: auto; margin-right: auto;" width="" height="140" alt="" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/patreon_logo_icon_170869.png">
-    </picture>
-    </a>
+  <strong>Calming Teas & Energizing Coffees</strong>
+</p>
+
+<p align="center">
+  <em>The relaxed side of the Let's Do collection.</em>
+</p>
+
+<br>
+
+<p align="center">
+  <em>"Take some time off, relax."</em>
+</p>
+
+<br>
+
+Herbal Brews adds an intricate way of drying and brewing various types of tea and a few types of coffee. You collect the tea leaves, the sun dries the tea leaves, and the kettle brews the best blend you've ever had.
+
+<br>
+
+Kick back, enjoy, and relish in the moment.
+
+<br>
+
+Herbal Brews is a fun addition to your vanilla experience and serves to add the ability to brew teas and coffees without breaking the vanilla immersion.
+
+<br>
+
+## Venture the Land
+
+<br>
+
+- Various tea plants that grow in different biomes  
+- New mechanic to dry tea leaves  
+
+<br>
+
+Sit down, watch tea leaves dry.
+
+<br>
+
+## Brewing Relaxation
+
+<br>
+
+- Brew tea in either the Tea Kettle or Copper Tea Kettle  
+- Concoct various combinations of potions using the Brewing Cauldron  
+- Brew delicious teas and coffees with beneficial effects to all players in a radius  
+
+<br>
+
+Who knew witches could brew more than potions?
+
+<br>
+
+## Decorative Elements
+
+<br>
+
+- Use Hibiscus and Lavender not only in your tea, but also your flower pots  
+- Decorate your kitchen with a jug that can contain up to three different teas and functions as a one-time weapon  
+- Place down the teas you've brewed and show off your collection of blends that way  
+- Dress up like a true gentleman or a wicked witch using the Top Hat and Witch Hat respectively. They also reduce damage from magic while worn  
+
+<br>
+
+<p align="center">
+  <strong>Venture the world.</strong>
+</p>
+
+<p align="center">
+  <strong>Brew a blessed blend.</strong>
+</p>
+
+<p align="center">
+  <strong>Relax.</strong>
+</p>
+
+<br>
+
+<p align="center">
+  <em>Dedicated to MissLilitu</em>
+</p>
+
+<br>
+
+<div align="center">
+
+# The Let’s Do Collection
+
+<br>
+
+<a href="https://lets-do.ch/mods/">
+  <img src="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/raw/main/LOGO.png?raw=true" width="350" alt="The Let’s Do Collection">
+</a>
+
+<br>
+
+# Support & Community
+
+</div>
+
+<br>
+
+<p align="center">
+  Let’s Do grows through its community.
+</p>
+
+<br>
+
+<p align="center">
+  <a href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection">GitHub</a> •
+  <a href="https://discord.gg/Jb2bgpYr">Discord</a> •
+  <a href="https://www.patreon.com/c/u78595058">Patreon</a>
 </p>
