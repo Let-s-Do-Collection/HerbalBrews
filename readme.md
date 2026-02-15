@@ -1,4 +1,4 @@
-![HerbalBrews](https://lets-do.ch/assets/mod-logos/herbalbrews.png)
+![HerbalBrews](https://lets-do.ch/assets/mod-logos/herbalbrews.webp)
 
 <br>
 
