@@ -1,3 +1,9 @@
+[1.1.3]
+
+**Fixed**
+* Fixed potion duration shown in drink tooltips not matching the actual applied effect duration
+* Fixed duplicate application of food-based effects when consuming drinks
+
 [1.1.2]
 
 **Fixed**

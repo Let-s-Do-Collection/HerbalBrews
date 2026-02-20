@@ -42,15 +42,14 @@ public class DrinkBlockItem extends BlockItem {
 
     @Override
     public @NotNull ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+        ItemStack result = super.finishUsingItem(stack, world, user);
+
         PotionContents potionContents = stack.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
         if (potionContents.hasEffects()) {
             potionContents.forEachEffect(user::addEffect);
         }
-        FoodProperties foodProperties = stack.get(DataComponents.FOOD);
-        if (foodProperties != null) {
-            foodProperties.effects().forEach(possibleEffect -> user.addEffect(possibleEffect.effect()));
-        }
-        return super.finishUsingItem(stack, world, user);
+
+        return result;
     }
 
     @Override
@@ -65,31 +64,33 @@ public class DrinkBlockItem extends BlockItem {
                 if (prev == null) {
                     combined.put(id, inst);
                 } else {
-                    int amp = Math.max(prev.getAmplifier(), inst.getAmplifier());
-                    int dur = Math.max(prev.getDuration(), inst.getDuration());
-                    boolean amb = prev.isAmbient() || inst.isAmbient();
-                    boolean vis = prev.isVisible() || inst.isVisible();
+                    int amplifier = Math.max(prev.getAmplifier(), inst.getAmplifier());
+                    int duration = Math.max(prev.getDuration(), inst.getDuration());
+                    boolean ambient = prev.isAmbient() || inst.isAmbient();
+                    boolean visible = prev.isVisible() || inst.isVisible();
                     boolean icon = prev.showIcon() || inst.showIcon();
-                    combined.put(id, new MobEffectInstance(prev.getEffect(), dur, amp, amb, vis, icon));
+                    combined.put(id, new MobEffectInstance(prev.getEffect(), duration, amplifier, ambient, visible, icon));
                 }
             });
         }
 
         FoodProperties food = stack.get(DataComponents.FOOD);
         if (food != null) {
-            for (FoodProperties.PossibleEffect e : food.effects()) {
-                MobEffectInstance inst = e.effect();
+            for (FoodProperties.PossibleEffect possibleEffect : food.effects()) {
+                if (possibleEffect.probability() != 1.0f) continue;
+
+                MobEffectInstance inst = possibleEffect.effect();
                 ResourceLocation id = BuiltInRegistries.MOB_EFFECT.getKey(inst.getEffect().value());
                 MobEffectInstance prev = combined.get(id);
                 if (prev == null) {
                     combined.put(id, inst);
                 } else {
-                    int amp = Math.max(prev.getAmplifier(), inst.getAmplifier());
-                    int dur = Math.max(prev.getDuration(), inst.getDuration());
-                    boolean amb = prev.isAmbient() || inst.isAmbient();
-                    boolean vis = prev.isVisible() || inst.isVisible();
+                    int amplifier = Math.max(prev.getAmplifier(), inst.getAmplifier());
+                    int duration = Math.max(prev.getDuration(), inst.getDuration());
+                    boolean ambient = prev.isAmbient() || inst.isAmbient();
+                    boolean visible = prev.isVisible() || inst.isVisible();
                     boolean icon = prev.showIcon() || inst.showIcon();
-                    combined.put(id, new MobEffectInstance(prev.getEffect(), dur, amp, amb, vis, icon));
+                    combined.put(id, new MobEffectInstance(prev.getEffect(), duration, amplifier, ambient, visible, icon));
                 }
             }
         }
@@ -116,6 +117,7 @@ public class DrinkBlockItem extends BlockItem {
                 attributeModifiers.add(new Pair<>(attribute, modifier));
             });
         }
+
         if (!attributeModifiers.isEmpty()) {
             tooltip.add(Component.empty());
             tooltip.add(Component.translatable("potion.whenDrank").withStyle(ChatFormatting.DARK_PURPLE));
@@ -125,6 +127,7 @@ public class DrinkBlockItem extends BlockItem {
                 double displayAmount = (modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_BASE || modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                         ? amount * 100.0
                         : amount;
+
                 if (amount > 0.0) {
                     tooltip.add(Component.translatable(
                                     "attribute.modifier.plus." + modifier.operation().id(),
@@ -140,6 +143,7 @@ public class DrinkBlockItem extends BlockItem {
                 }
             }
         }
+
         tooltip.add(Component.translatable("tooltip.herbalbrews.canbeplaced").withStyle(style -> style.withColor(TextColor.fromRgb(0xCD7F32)).withItalic(true)));
     }
 }
