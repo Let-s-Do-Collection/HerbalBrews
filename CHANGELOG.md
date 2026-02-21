@@ -3,6 +3,7 @@
 **Fixed**
 * Potion duration shown in drink tooltips not matching the actual applied effect duration
 * Duplicate application of food-based effects when consuming drinks
+* Prevented a server crash when tea leaf drying tick runs on a blockstate without the DRYING property
 
 **Changed**
 * Tooltips now match the style of other Let’s Do mods
