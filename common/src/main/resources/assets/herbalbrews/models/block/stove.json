@@ -2,10 +2,10 @@
 	"format_version": "1.21.11",
 	"credit": "Made by Satisfy",
 	"textures": {
-		"0": "herbalbrews:block/brick_stove_bottom",
+		"0": "herbalbrews:block/stove_bottom",
 		"2": "herbalbrews:block/stove_side",
-		"3": "herbalbrews:block/brick_stove_top",
-		"5": "herbalbrews:block/brick_stove_front",
+		"3": "herbalbrews:block/stove_top",
+		"5": "herbalbrews:block/stove_front",
 		"particle": "herbalbrews:block/stove_side"
 	},
 	"elements": [

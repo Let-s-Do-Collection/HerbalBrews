@@ -1,8 +1,16 @@
 [1.1.3]
 
 **Fixed**
-* Fixed potion duration shown in drink tooltips not matching the actual applied effect duration
-* Fixed duplicate application of food-based effects when consuming drinks
+* Potion duration shown in drink tooltips not matching the actual applied effect duration
+* Duplicate application of food-based effects when consuming drinks
+
+**Changed**
+* Tooltips now match the style of other Let’s Do mods
+* Minor texture improvements
+
+**Added** 
+* Ko_Kr translation (thanks to cs8minty)
+*** 
 
 [1.1.2]
 

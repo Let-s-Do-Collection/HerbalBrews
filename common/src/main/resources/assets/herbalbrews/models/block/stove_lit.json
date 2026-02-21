@@ -2,10 +2,10 @@
 	"format_version": "1.21.11",
 	"credit": "Made by Satisfy",
 	"textures": {
-		"0": "herbalbrews:block/brick_stove_bottom",
-		"3": "herbalbrews:block/brick_stove_top_on",
+		"3": "herbalbrews:block/stove_top_on",
 		"4": "herbalbrews:block/stove_side",
-		"5": "herbalbrews:block/brick_stove_front_lit",
+		"5": "herbalbrews:block/stove_front_lit",
+		"6": "herbalbrews:block/stove_bottom",
 		"particle": "herbalbrews:block/stove_side"
 	},
 	"elements": [
@@ -18,7 +18,7 @@
 				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
 				"west": {"uv": [0, 0, 16, 16], "texture": "#4"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#3"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+				"down": {"uv": [0, 0, 16, 16], "texture": "#6"}
 			}
 		}
 	],

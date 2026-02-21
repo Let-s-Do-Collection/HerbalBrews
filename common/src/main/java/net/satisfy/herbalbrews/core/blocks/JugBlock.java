@@ -1,5 +1,6 @@
 package net.satisfy.herbalbrews.core.blocks;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -118,7 +119,7 @@ public class JugBlock extends Block implements EntityBlock {
             tooltip.add(Component.translatable("tooltip.herbalbrews.description.jug_2").withStyle(style -> style.withColor(TextColor.fromRgb(0x4CAF50)).withItalic(false)));
 
         } else {
-            tooltip.add(Component.translatable("tooltip.herbalbrews.canbeplaced").withStyle(style -> style.withColor(TextColor.fromRgb(0xCD7F32)).withItalic(true)));
+            tooltip.add(Component.translatable("tooltip.herbalbrews.canbeplaced").withStyle(ChatFormatting.GRAY));
         }
     }
 
