@@ -53,7 +53,6 @@ public class CauldronGui extends AbstractContainerScreen<CauldronGuiHandler> {
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
-        this.renderBackground(guiGraphics, mouseX, mouseY, delta);
         super.render(guiGraphics, mouseX, mouseY, delta);
         if (isMouseOverProgress(mouseX, mouseY)) {
             int remainingTicks = this.menu.getRequiredDuration() - this.menu.getCookingTime();
