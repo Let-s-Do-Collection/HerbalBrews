@@ -44,9 +44,11 @@ public class DrinkBlockItem extends BlockItem {
     public @NotNull ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
         ItemStack result = super.finishUsingItem(stack, world, user);
 
-        PotionContents potionContents = stack.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
-        if (potionContents.hasEffects()) {
-            potionContents.forEachEffect(user::addEffect);
+        if (!world.isClientSide) {
+            PotionContents potionContents = stack.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
+            if (potionContents.hasEffects()) {
+                potionContents.forEachEffect(user::addEffect);
+            }
         }
 
         return result;
@@ -101,7 +103,7 @@ public class DrinkBlockItem extends BlockItem {
             for (MobEffectInstance inst : combined.values()) {
                 MutableComponent effectName = Component.translatable(inst.getDescriptionId());
                 if (inst.getDuration() > 20) {
-                    effectName = Component.translatable("potion.withDuration", effectName, MobEffectUtil.formatDuration(inst, 1.0f, 20.0f));
+                    effectName = Component.translatable("potion.withDuration", effectName, MobEffectUtil.formatDuration(inst, 1.0f, tooltipContext.tickRate()));
                 }
                 tooltip.add(effectName.withStyle(inst.getEffect().value().getCategory().getTooltipFormatting()));
             }

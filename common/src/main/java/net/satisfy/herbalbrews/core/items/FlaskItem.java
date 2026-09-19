@@ -98,7 +98,7 @@ public class FlaskItem extends Item {
                     effectName = effectName.append(" " + toRomanNumerals(mobEffectInstance.getAmplifier() + 1));
                 }
                 if (mobEffectInstance.getDuration() > 20) {
-                    effectName = Component.translatable("potion.withDuration", effectName, MobEffectUtil.formatDuration(mobEffectInstance, 1.0f, 1.0F));
+                    effectName = Component.translatable("potion.withDuration", effectName, MobEffectUtil.formatDuration(mobEffectInstance, 1.0f, tooltipContext.tickRate()));
                 }
                 tooltip.add(effectName.withStyle(mobEffectInstance.getEffect().value().getCategory().getTooltipFormatting()));
             });

@@ -9,6 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Clearable;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JugBlockEntity extends BlockEntity {
+public class JugBlockEntity extends BlockEntity implements Clearable {
     private final List<ItemStack> drinks = new ArrayList<>();
 
     public JugBlockEntity(BlockPos pos, BlockState state) {
@@ -54,13 +55,16 @@ public class JugBlockEntity extends BlockEntity {
     }
 
     @Override
+    public void clearContent() {
+        drinks.clear();
+    }
+
+    @Override
     protected void saveAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
         super.saveAdditional(compoundTag, provider);
         ListTag drinkList = new ListTag();
         for (ItemStack drink : drinks) {
-            CompoundTag drinkTag = new CompoundTag();
-            drink.save(provider, drinkTag);
-            drinkList.add(drinkTag);
+            drinkList.add(drink.save(provider, new CompoundTag()));
         }
         compoundTag.put("Drinks", drinkList);
     }

@@ -1,3 +1,16 @@
+[1.1.4]
+
+**Fixed**
+* Flask tooltip showing a wildly incorrect (20x too long) potion duration instead of the actual applied effect duration
+* Jug losing its stored tea's data on save/reload instead of persisting it, which could corrupt the containing chunk's save data
+* Item duplication when a Create contraption caused a Jug or placed Drink to break without clearing its contents first
+* Removed redundant render calls in the Tea Kettle and Cauldron GUIs (thanks to Awoolanche)
+
+**Added**
+* Italian translation (thanks to Serena)
+
+***
+
 [1.1.3]
 
 **Fixed**

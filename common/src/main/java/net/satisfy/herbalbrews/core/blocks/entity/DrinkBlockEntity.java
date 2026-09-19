@@ -3,11 +3,12 @@ package net.satisfy.herbalbrews.core.blocks.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Clearable;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.satisfy.herbalbrews.core.registry.EntityTypeRegistry;
 
-public class DrinkBlockEntity extends BlockEntity {
+public class DrinkBlockEntity extends BlockEntity implements Clearable {
     
     private CompoundTag storedNbt;
 
@@ -21,6 +22,11 @@ public class DrinkBlockEntity extends BlockEntity {
 
     public CompoundTag getStoredNbt() {
         return storedNbt;
+    }
+
+    @Override
+    public void clearContent() {
+        storedNbt = null;
     }
 
     @Override
